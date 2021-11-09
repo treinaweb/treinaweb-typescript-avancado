@@ -21,16 +21,7 @@ class Sony{
 
 let tvSony = new Sony();
 console.log(tvSony); */
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-/* function minSize(size: number){
+/*function minSize(size: number){
     return (target: any, key: any) => {
         let val = target[key]
 
@@ -61,51 +52,37 @@ class LG{
 
 let lgTV = new LG(10);
 console.log(lgTV.size); */
-function delay(time) {
-    return function (target, key, descriptor) {
-        var method = descriptor.value;
-        descriptor.value = function () {
-            var _this = this;
-            var args = [];
-            for (var _i = 0; _i < arguments.length; _i++) {
-                args[_i] = arguments[_i];
-            }
-            setTimeout(function () {
-                method.apply(_this, args);
+/* function delay(time: number){
+    return (target: any, key: string, descriptor: PropertyDescriptor) => {
+        let method = descriptor.value;
+
+        descriptor.value = function (...args: any) {
+            setTimeout(() => {
+                method.apply(this, args)
             }, time);
-        };
-        return descriptor;
-    };
-}
-var Timer = /** @class */ (function () {
-    function Timer() {
-    }
-    Timer.prototype.showMsg = function () {
-        console.log("mensagem após 5 segundos");
-    };
-    Timer.prototype.newTimer = function (cont) {
-        if (cont === 0) {
-            return 0;
         }
-        else {
-            console.log("Contador em " + cont);
+
+        return descriptor;
+    }
+} */
+/* class Timer {
+
+    @delay(5000)
+    showMsg(){
+        console.log("mensagem após 5 segundos");
+    }
+
+    @delay(500)
+    newTimer(cont: number): number{
+        if (cont === 0 ) {
+            return 0
+        }else {
+            console.log(`Contador em ${cont}`);
             return this.newTimer(cont - 1);
         }
-    };
-    __decorate([
-        delay(5000),
-        __metadata("design:type", Function),
-        __metadata("design:paramtypes", []),
-        __metadata("design:returntype", void 0)
-    ], Timer.prototype, "showMsg", null);
-    __decorate([
-        delay(500),
-        __metadata("design:type", Function),
-        __metadata("design:paramtypes", [Number]),
-        __metadata("design:returntype", Number)
-    ], Timer.prototype, "newTimer", null);
-    return Timer;
-}());
-var t = new Timer();
+    }
+}
+
+let t = new Timer();
 t.showMsg();
-t.newTimer(5);
+t.newTimer(5); */ 

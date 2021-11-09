@@ -53,7 +53,7 @@ class LG{
 let lgTV = new LG(10);
 console.log(lgTV.size); */
 
-function delay(time: number){
+/* function delay(time: number){
     return (target: any, key: string, descriptor: PropertyDescriptor) => {
         let method = descriptor.value;
 
@@ -65,10 +65,10 @@ function delay(time: number){
 
         return descriptor;
     }
-}
+} */ 
 
 
-class Timer {
+/* class Timer {
 
     @delay(5000)
     showMsg(){
@@ -88,4 +88,4 @@ class Timer {
 
 let t = new Timer();
 t.showMsg();
-t.newTimer(5);
+t.newTimer(5); */
