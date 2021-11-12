@@ -15,7 +15,7 @@ console.log(pessoa.idade);
 pessoa.setIdade(5);
 console.log(pessoa.idade); */
 
-let carros: string[] = ['Palio', 'Fiesta', 'Fit'];
+/* let carros: string[] = ['Palio', 'Fiesta', 'Fit'];
 let numPrimos: number[] = [2, 3, 5];
 
 function pegarPrimeiroElemento<T>(lista: T[]): T{
@@ -23,4 +23,4 @@ function pegarPrimeiroElemento<T>(lista: T[]): T{
 }
 
 console.log(pegarPrimeiroElemento(numPrimos));
-console.log(pegarPrimeiroElemento(carros));
+console.log(pegarPrimeiroElemento(carros)); */
