@@ -24,3 +24,4 @@ function pegarPrimeiroElemento<T>(lista: T[]): T{
 
 console.log(pegarPrimeiroElemento(numPrimos));
 console.log(pegarPrimeiroElemento(carros)); */ 
+//# sourceMappingURL=generics.js.map

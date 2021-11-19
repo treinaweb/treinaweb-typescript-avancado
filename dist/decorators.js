@@ -86,3 +86,4 @@ console.log(lgTV.size); */
 let t = new Timer();
 t.showMsg();
 t.newTimer(5); */ 
+//# sourceMappingURL=decorators.js.map
