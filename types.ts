@@ -23,12 +23,12 @@ exibirAnimal('Simba', 'mamifero', 9); */
 
 showStatus(4); */
 
-interface PessoaFisica {
+type PessoaFisica = {
     nome: string;
     cpf: string;
 }
 
-interface PessoaJuridica {
+type PessoaJuridica = {
     nome: string;
     cnpj: string;
 }
